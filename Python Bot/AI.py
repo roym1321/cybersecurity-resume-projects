@@ -92,8 +92,7 @@ async def image(interaction: discord.Interaction, request: str, private: bool = 
 async def ai(interaction: discord.Interaction, request: str, private: bool = False):
     await interaction.response.defer(ephemeral=private)
     response = ai_response(request)
-    # if code_lang != 'False':
-    #     response = f'```{code_lang}\n{response}```'
+
     embed = discord.Embed(
         title='AI',
         description=response,

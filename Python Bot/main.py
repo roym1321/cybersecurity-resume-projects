@@ -21,8 +21,8 @@ async def internal_command_prompt():
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Streaming(name="Fortnite",
-                                                         game='Fortnite',
+    await bot.change_presence(activity=discord.Streaming(name="A Game",
+                                                         game='Some Game',
                                                          url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"))
     await bot.user.edit(username='RoyBot')
     synced = await bot.tree.sync()

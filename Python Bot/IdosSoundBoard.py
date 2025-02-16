@@ -19,11 +19,6 @@ class Ido_Soundboard_Button(discord.ui.Button):
             return
         channel = interaction.user.voice.channel
         voice_client = await JoinChannel(channel_to_join=channel, interaction=interaction, respond=False)
-        # try:
-        #     channel = interaction.user.voice.channel
-        #     voice_client = await channel.connect()
-        # except:
-        #     voice_client = interaction.client.voice_clients[0]
         file_path = r"C:\Users\Roy\Downloads\idos\\" + self.file_name
         audio_source = discord.FFmpegPCMAudio(file_path)
         voice_client.play(audio_source)
